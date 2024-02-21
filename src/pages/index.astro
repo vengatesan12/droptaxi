@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/footer.astro';
+import { Image, getImage } from 'astro:assets';
+import taxi from '../assets/taxi.png';
+import Fream from '../assets/Fream.png';
+import NewFream from '../assets/NewFream.png';
+import Div1 from '../assets/Div1.png';
+import Div2 from '../assets/Div2.png';
+import Div3 from '../assets/Div3.png';
+import Green from '../assets/Green.png';
+---
+
+<Layout title="Book my plots">
+	<main class="w-full flex flex-col justify-center items-center">
+		<div class='font-Rubik w-full'>
+      <div class="bg-blend-screen bg-[#000] bg-[url('../images/banner.svg')] bg-cover py-4">
+        <div class="md:max-w-6xl mx-auto px-3">
+          <div class='flex justify-between items-center w-11/12 md:w-full'>
+            <Image class='w-18 h-12' src={taxi} alt='/' />
+            <div class="flex hidden md:block">
+              <button class='text-base text-[#FFC727] border-2 border-yellow-300 rounded-3xl font-normal py-3 w-36 mr-4'>Login</button>
+              <button class='bg-[#FFC727] text-base text-[#7634BF] rounded-3xl font-normal py-3 w-36'>SignUp</button>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center my-8">
+            <div class="flex flex-col justify-center w-11/12 md:w-1/2">
+              <div class="text-[#FFFFFF] text-7xl lg:text-8xl font-bold whitespace-normal mb-7">
+                A way to track your <span class="text-[#FFC727]">Plots<span>
+              </div>
+              <div class="text-[#FFFFFF] text-lg font-normal whitespace-normal mb-7">
+                The easy way to stay on top of your competitors, no matter where you are.
+              </div>
+              <div>
+                <button id="Signup" class='bg-[#7634BF] text-base text-white w-[190.47px] rounded-3xl font-normal py-3'>Download Now</button>
+              </div>
+            </div>
+            <div class="flex justify-center items-start w-11/12 md:w-1/2">
+              <Image src={Fream} alt='/' />
+            </div>
+          </div>
+        </div>
+			
+			  <div class="fixed bottom-5 right-5  ">
+          <div id="whatapp" class=''>
+            <Image class='w-16' src={Green} alt='/' />
+          </div>
+			  </div>
+			</div>
+
+      <div class="py-4">
+        <div class="md:max-w-6xl mx-auto px-3">
+          <div class="flex flex-col-reverse md:flex-row items-center my-8">
+            <div class="flex justify-start items-start w-11/12 md:w-1/2">
+              <Image class='w-[500px]' src={Div1} alt='/' />
+            </div>
+            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
+              <p class='text-[#9333ea] text-xl font-normal'>#1</p>
+              <div class="text-[#000] text-6xl font-bold whitespace-normal mb-7">
+                Your all Plots in <span class="text-[#7634BF]">One place<span>
+              </div>
+              <div class="text-[#374151] text-lg font-normal whitespace-normal mb-7">
+                Here are all the plots presented in a single place. We will also keep track of the number of people who have viewed the plots. You can share them on all platforms.
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+
+      <div class="bg-[#F3F5F6] py-4">
+        <div class="md:max-w-6xl mx-auto px-3">
+          <div class="flex flex-col md:flex-row items-center my-8">
+            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
+              <p class='text-[#9333ea] text-xl font-normal'>#2</p>
+              <div class="text-[#000] text-6xl font-bold whitespace-normal mb-7">
+                Get <span class="text-[#7634BF]">Enquiry<span> Directly from Customers
+              </div>
+              <div class="text-[#374151] text-lg font-normal whitespace-normal mb-7">
+                Plots: Available, Advance Paid, or Sold Out. Directly interact with customers for updates, leads, and follow-ups.
+              </div>
+            </div>
+            <div class="flex justify-end items-start w-11/12 md:w-1/2">
+              <Image class='w-[500px]' src={Div2} alt='/' />
+            </div>
+          </div>
+        </div>
+			</div>
+
+      <div class="py-4">
+        <div class="md:max-w-6xl mx-auto px-3">
+          <div class="flex flex-col-reverse md:flex-row items-center my-8">
+            <div class="flex justify-start items-start w-11/12 md:w-1/2">
+              <Image class='w-[500px]' src={Div3} alt='/' />
+            </div>
+            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
+              <p class='text-[#9333ea] text-xl font-normal'>#3</p>
+              <div class="text-[#000] text-6xl font-bold whitespace-normal mb-7">
+                Manage Plots <span class="text-[#7634BF]">anywhere<span>
+              </div>
+              <div class="text-[#374151] text-lg font-normal whitespace-normal mb-7">
+                Change the status of your plots to either "Available", "Advance Paid", or "Sold out". Updates will be automatically generated.
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+
+      <div class="bg-black py-4">
+        <div class="md:max-w-6xl  mx-auto px-3">
+          <div class="flex flex-col md:flex-row justify-around items-center my-4">
+            <div class='text-[#FFFFFF] my-4'>
+              <h1 class='text-6xl  font-bold'>15</h1>
+              <p class='text-xl font-normal'>Team members</p>
+            </div>
+            <div class='text-[#FFFFFF] my-4'>
+              <h1 class='text-6xl  font-bold'>230K</h1>
+              <p class='text-xl font-normal'>Happy users</p>
+            </div>
+            <div class='text-[#FFFFFF] my-4'>
+              <h1 class='text-6xl  font-bold'>340+</h1>
+              <p class='text-xl font-normal'>Supported lenders</p>
+            </div>
+          </div>
+        </div>
+			</div>
+
+      <div class="bg-blend-screen bg-[#000] bg-[url('../images/playstore.svg')] bg-cover py-4">
+        <div class="md:max-w-6xl mx-auto px-3">
+          <div class="flex flex-col-reverse md:flex-row items-center my-8">
+            <div class="flex justify-start items-start w-11/12 md:w-1/2">
+              <Image class='w-[500px]' src={NewFream} alt='/' />
+            </div>
+            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
+              <div class="text-[#ffff] text-6xl font-bold whitespace-normal mb-7">
+                What are you waiting for?
+              </div>
+              <div class="text-[#fff] text-lg font-normal whitespace-normal mb-7">
+                There's no better time to take control of your Plots. With Bookmyplots powerful categorization and visualization tools you'll actually stick to your budget.
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+
+		</div>
+		<Footer />
+	</main>
+</Layout>
+<script>
+	// Find all buttons with the `alert` class on the page.
+	const button = document.getElementById('whatapp');
+  
+	// Handle clicks on each button.
+	button && button.addEventListener('click', function() {
+		const formattedPhoneNumber = encodeURIComponent(7418857157);
+		const whatsappUrl = `https://api.whatsapp.com/send?phone=${formattedPhoneNumber}`;
+		window.open(whatsappUrl);
+	});
+  const signupButton = document.getElementById("Signup");
+    signupButton &&
+        signupButton.addEventListener("click", function () {
+            const SignupUrl =
+                "https://play.google.com/store/apps/details?id=co.bookmyplots.app";
+            window.open(SignupUrl);
+        });
+</script>

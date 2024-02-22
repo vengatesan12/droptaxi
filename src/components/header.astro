@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import taxi from "../assets/taxi.png";
+import call from "../assets/call.png";
+import Lastlogo from "../assets/Lastlogo.png";
+---
+
+<div class="font-Rubik w-full flex flex-col">
+    <div>
+        <div class="bg-green-700 flex">
+            <div class="mt-2 px-2"><Image class="w-10 h-10" src={call} alt="call" /></div>
+            <p class="text-2xl text-white py-3">call 7708597216</p>
+        </div>
+    </div>
+    <div class="lg:flex justify-between mt-4 p-2 gap-x-24">
+        <div
+            class="flex justify-between items-center w-11/12 md:w-full bg-white"
+        >
+            <Image class="w-28 h-12" src={taxi} alt="/" />
+            <div class="flex md:block">
+                <a
+                    class="hover:bg-[#FFC727] text-base rounded-lg font-normal py-3 px-4"
+                    href="/"
+                >
+                    Home</a
+                >
+                <a
+                    class="hover:bg-[#FFC727] text-base rounded-lg font-normal py-3 px-4"
+                    href="/about/"
+                >
+                    About</a
+                >
+                <a
+                    class="hover:bg-[#FFC727] text-base rounded-lg font-normal py-3 px-4"
+                    href="/terms/"
+                >
+                    Conact</a
+                >
+                <button
+                    class="ml-3 bg-amber-500 text-base rounded-lg font-normal py-3 px-4"
+                    >Get In Touch</button
+                >
+            </div>
+        </div>
+    </div>
+</div>

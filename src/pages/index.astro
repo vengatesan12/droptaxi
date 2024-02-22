@@ -1,166 +1,420 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/footer.astro';
-import { Image, getImage } from 'astro:assets';
-import taxi from '../assets/taxi.png';
-import Fream from '../assets/Fream.png';
-import NewFream from '../assets/NewFream.png';
-import Div1 from '../assets/Div1.png';
-import Div2 from '../assets/Div2.png';
-import Div3 from '../assets/Div3.png';
-import Green from '../assets/Green.png';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import { Image, getImage } from "astro:assets";
+import Fream from "../assets/Fream.png";
+import NewFream from "../assets/NewFream.png";
+import Div1 from "../assets/Div1.png";
+import Div2 from "../assets/Div2.png";
+import star from "../assets/star.png";
+import Green from "../assets/Green.png";
 ---
 
-<Layout title="Book my plots">
-	<main class="w-full flex flex-col justify-center items-center">
-		<div class='font-Rubik w-full'>
-      <div class="bg-blend-screen bg-[#000] bg-[url('../images/banner.svg')] bg-cover py-4">
+<Layout title="Drop Taxi">
+  <main class="w-full flex flex-col justify-center items-center">
+    <div class="font-Rubik w-full">
+      <div class="bg-cover py-4">
         <div class="md:max-w-6xl mx-auto px-3">
-          <div class='flex justify-between items-center w-11/12 md:w-full'>
-            <Image class='w-18 h-12' src={taxi} alt='/' />
-            <div class="flex hidden md:block">
-              <button class='text-base text-[#FFC727] border-2 border-yellow-300 rounded-3xl font-normal py-3 w-36 mr-4'>Login</button>
-              <button class='bg-[#FFC727] text-base text-[#7634BF] rounded-3xl font-normal py-3 w-36'>SignUp</button>
-            </div>
-          </div>
+          <Header />
           <div class="flex flex-col md:flex-row items-center my-8">
             <div class="flex flex-col justify-center w-11/12 md:w-1/2">
-              <div class="text-[#FFFFFF] text-7xl lg:text-8xl font-bold whitespace-normal mb-7">
-                A way to track your <span class="text-[#FFC727]">Plots<span>
+              <div class="text-sm font-medium">Book your One Way Taxi</div>
+              <div class="flex">
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-radio"
+                    type="radio"
+                    value=""
+                    name="inline-radio-group"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    for="inline-radio"
+                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >One Way</label
+                  >
+                </div>
+                <div class="flex items-center me-4">
+                  <input
+                    id="inline-2-radio"
+                    type="radio"
+                    value=""
+                    name="inline-radio-group"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    for="inline-2-radio"
+                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Round Trip</label
+                  >
+                </div>
               </div>
-              <div class="text-[#FFFFFF] text-lg font-normal whitespace-normal mb-7">
-                The easy way to stay on top of your competitors, no matter where you are.
+              <form>
+                <div class="grid gap-6 mb-6">
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="small_outlined"
+                      class="block rounded-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder="Enter your name "
+                    />
+                    <label
+                      for="small_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-1 z-10 origin-[0] bg-gray-50 dark:bg-gray-900 px-6 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-3 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                      >Enter Name</label
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="small_outlined"
+                      class="block rounded-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder="Enter contact number"
+                    />
+                    <label
+                      for="small_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-1 z-10 origin-[0] bg-gray-50 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-3 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                      >Enter Mobile Number</label
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="small_outlined"
+                      class="block rounded-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder="Enter pickup location"
+                    />
+                    <label
+                      for="small_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-1 z-10 origin-[0] bg-gray-50 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-3 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                      >Enter Pickup Address</label
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="small_outlined"
+                      class="block rounded-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder="Enter drop location"
+                    />
+                    <label
+                      for="small_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-1 z-10 origin-[0] bg-gray-50 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-3 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                      >Enter Drop Address</label
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="Date"
+                      id="small_outlined"
+                      class="block rounded-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                    />
+                    <label
+                      for="small_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-1 z-10 origin-[0] bg-gray-50 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-3 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                      >Pickup Date</label
+                    >
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="time"
+                      id="small_outlined"
+                      class="block rounded-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder="Time "
+                    />
+                    <label
+                      for="small_outlined"
+                      class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-1 z-10 origin-[0] bg-gray-50 dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1 peer-focus:scale-75 peer-focus:-translate-y-3 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                      >Pickup Time</label
+                    >
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >Submit</button
+                >
+              </form>
+            </div>
+          </div>
+
+          <div class="flex justify-around bg-green-900">
+            <div>
+              <p class="text-3xl font-bold text-white py-4">
+                Outstating Tariff
+              </p>
+              <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table
+                  class="w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-100"
+                >
+                  <thead
+                    class="text-xs text-white uppercase bg-orange-500 dark:text-white"
+                  >
+                    <tr>
+                      <th scope="col" class="px-6 py-3"> Vehicle Type</th>
+                      <th scope="col" class="px-6 py-3"> One Way</th>
+                      <th scope="col" class="px-6 py-3"> Round Trip</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-green-900 border-b border-white">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        SEDAN
+                      </th>
+                      <td class="px-6 py-4"> ₹13/KM</td>
+                      <td class="px-6 py-4"> ₹12/KM</td>
+                    </tr>
+                    <tr class="bg-green-900 border-b border-white">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        ETIOS
+                      </th>
+                      <td class="px-6 py-4"> ₹13/KM</td>
+                      <td class="px-6 py-4"> ₹12/KM</td>
+                    </tr>
+                    <tr class="bg-green-900 border-b border-white">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        SUV
+                      </th>
+                      <td class="px-6 py-4"> ₹18/KM</td>
+                      <td class="px-6 py-4"> ₹16/KM</td>
+                    </tr>
+                    <tr class="bg-green-900">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        INNOVA
+                      </th>
+                      <td class="px-6 py-4"> ₹19/KM</td>
+                      <td class="px-6 py-4"> ₹17/KM</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-white py-4">Rental Tariff</p>
+              <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table
+                  class="w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-100"
+                >
+                  <thead
+                    class="text-xs text-white uppercase bg-orange-500 dark:text-white"
+                  >
+                    <tr>
+                      <th scope="col" class="px-6 py-3"> Package Type</th>
+                      <th scope="col" class="px-6 py-3"> SEDAN</th>
+                      <th scope="col" class="px-6 py-3">ETIOS</th>
+                      <th scope="col" class="px-6 py-3"> SUV</th>
+                      <th scope="col" class="px-6 py-3"> INNOVA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-green-900 border-b border-white">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        5 hrs 50 KM
+                      </th>
+                      <td class="px-6 py-4"> ₹1250</td>
+                      <td class="px-6 py-4"> ₹1350</td>
+                      <td class="px-6 py-4"> ₹1750</td>
+                      <td class="px-6 py-4"> ₹2000</td>
+                    </tr>
+                    <tr class="bg-green-900 border-b border-white">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        10 hrs 100 KM
+                      </th>
+                      <td class="px-6 py-4"> ₹2500</td>
+                      <td class="px-6 py-4"> ₹2700</td>
+                      <td class="px-6 py-4"> ₹3500</td>
+                      <td class="px-6 py-4"> ₹4000</td>
+                    </tr>
+                    <tr class="bg-green-900">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100"
+                      >
+                        15 hrs 150 KM
+                      </th>
+                      <td class="px-6 py-4"> ₹3750</td>
+                      <td class="px-6 py-4"> ₹4050</td>
+                      <td class="px-6 py-4"> ₹5250</td>
+                      <td class="px-6 py-4"> ₹6000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-100 py-8">
+            <div class="py-4">
+              <p class="text-center mt-3 py-3 text-base text-gray-600">
+                01. ABOUT EXPERIENCE
+              </p>
+              <h2 class="text-center text-5xl font-bold">
+                Affordable and Reliable Outstation Taxi Services with Green Drop
+                Taxi
+              </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center gap-2 mb-8">
+              <div class="flex flex-wrap justify-center md:w-64">
+                <div
+                  class="bg-green-900 p-2 rounded-tr-3xl rounded-bl-3xl py-10 shadow-lg"
+                >
+                  <div class="">
+                    <!-- <Image src={logo1} alt="/" /> -->
+                  </div>
+                  <h3 class="text-2xl font-bold text-white">
+                    Quality Services
+                  </h3>
+                  <p class="mt-3 text-white text-sm">
+                    Safe & reliable outstation taxi services in Tamil Nadu.
+                    Experienced drivers, competitive pricing, and hassle-free
+                    booking. Book now for a stress-free travel experience with
+                    Green Drop Taxi.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center md:w-64">
+                <div
+                  class="bg-green-900 hover:bg-orange-400 p-2 rounded-tr-3xl rounded-bl-3xl shadow-lg"
+                >
+                  <div class="">
+                    <!-- <Image src={logo2} alt="/" /> -->
+                  </div>
+                  <h3 class="text-2xl font-bold text-white">
+                    Professional Drivers
+                  </h3>
+                  <p class="mt-3 text-white text-sm">
+                    Travel with confidence with our professional drivers.
+                    Well-versed in local routes and committed to your safety and
+                    comfort. Book with Green Drop Taxi.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center md:w-64">
+                <div
+                  class="bg-green-900 p-2 rounded-tr-3xl rounded-bl-3xl shadow-lg"
+                >
+                  <div class="">
+                    <!-- <Image src={logo3} alt="/" /> -->
+                  </div>
+                  <h3 class="text-2xl font-bold text-white">24 Hour Support</h3>
+                  <p class="mt-3 text-white text-sm">
+                    Round-the-clock support for hassle-free bookings and
+                    assistance. Contact us anytime for outstation taxi services
+                    in Tamil Nadu with Green Drop Taxi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="py-4">
+              <p class="text-left mt-3 py-3 text-base text-gray-600">
+                04. GET TO KNOW ABOUT US
+              </p>
+              <h2 class="text-left text-5xl font-bold">
+                Green Drop Taxi: Your Trusted Outstation Transportation Partner
+                in Tamil Nadu
+              </h2>
+              <div class="text-left text-base">
+                <p class="py-4">
+                  Welcome to Green Drop Taxi, the premier outstation taxi
+                  service provider in Tamil Nadu. Our mission is to offer safe,
+                  reliable, and affordable transportation solutions to our
+                  valued customers, whether you need an airport pickup and drop,
+                  or a rental taxi in Chennai.
+                </p>
+                <p class="py-4">
+                  At Green Drop Taxi, we understand that travel can be
+                  stressful, and our goal is to make your journey as smooth and
+                  hassle-free as possible. With our extensive fleet of
+                  well-maintained and modern vehicles, we can cater to all your
+                  transportation needs, from solo travel to group travel.
+                </p>
+                <p class="py-4">
+                  We take pride in our experienced and courteous drivers who
+                  prioritize your safety and comfort during your journey. Our
+                  drivers are well-versed in the local routes, and they will
+                  ensure that you reach your destination on time and without any
+                  inconvenience.
+                </p>
+              </div>
+            </div>
+            <a
+              class="bg-amber-500 text-base rounded-lg font-normal py-3 px-6"
+              href="/about/"
+            >
+              Read More</a
+            >
+          </div>
+          <div class="bg-gray-100 py-20">
+            <div class="py-4 pb-10">
+              <p class="text-center mt-3 py-3 text-base text-gray-600">
+                05. OUR CUSTOMERS FEEDBACKS
+              </p>
+              <h2 class="text-center text-5xl font-bold">
+                What Our Customers Are Talking About Our Services
+              </h2>
+            </div>
+
+            <div class="bg-white">
+              <div class="py-5">
+                <Image class="w-16" src={star} alt="star" />
+                <p class="text-left text-2xl">Best drop taxi service</p>
+              </div>
+              <div class="text-left text-base border-t border-gray-200">
+                <p class="py-4">
+                  Green Drop Taxi provided me with a comfortable and hassle-free
+                  journey. Their driver was courteous and knowledgeable. I would
+                  recommend their service to anyone looking for reliable
+                  outstation taxi services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-amber-400 my-5">
+            <div class="flex justify-between items-center py-5 px-2">
+              <div class="flex flex-col">
+                <!-- <Image class="w-16" src={star} alt="star" /> -->
+                <p class="text-left text-2xl">Have any questions?</p>
+                <p class="text-left text-2xl">7708597216</p>
+              </div>
+              <div class="w-64">
+                So, why wait? Book your outstation taxi with Green Drop Taxi
+                today and enjoy a stress-free journey to your destination.
               </div>
               <div>
-                <button id="Signup" class='bg-[#7634BF] text-base text-white w-[190.47px] rounded-3xl font-normal py-3'>Download Now</button>
-              </div>
-            </div>
-            <div class="flex justify-center items-start w-11/12 md:w-1/2">
-              <Image src={Fream} alt='/' />
-            </div>
-          </div>
-        </div>
-			
-			  <div class="fixed bottom-5 right-5  ">
-          <div id="whatapp" class=''>
-            <Image class='w-16' src={Green} alt='/' />
-          </div>
-			  </div>
-			</div>
-
-      <div class="py-4">
-        <div class="md:max-w-6xl mx-auto px-3">
-          <div class="flex flex-col-reverse md:flex-row items-center my-8">
-            <div class="flex justify-start items-start w-11/12 md:w-1/2">
-              <Image class='w-[500px]' src={Div1} alt='/' />
-            </div>
-            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
-              <p class='text-[#9333ea] text-xl font-normal'>#1</p>
-              <div class="text-[#000] text-6xl font-bold whitespace-normal mb-7">
-                Your all Plots in <span class="text-[#7634BF]">One place<span>
-              </div>
-              <div class="text-[#374151] text-lg font-normal whitespace-normal mb-7">
-                Here are all the plots presented in a single place. We will also keep track of the number of people who have viewed the plots. You can share them on all platforms.
+                <a
+                  class="bg-amber-500 text-base rounded-lg font-normal py-3 px-6"
+                  href="/terms/"
+                >
+                  Contact Us</a
+                >
               </div>
             </div>
           </div>
         </div>
-			</div>
-
-      <div class="bg-[#F3F5F6] py-4">
-        <div class="md:max-w-6xl mx-auto px-3">
-          <div class="flex flex-col md:flex-row items-center my-8">
-            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
-              <p class='text-[#9333ea] text-xl font-normal'>#2</p>
-              <div class="text-[#000] text-6xl font-bold whitespace-normal mb-7">
-                Get <span class="text-[#7634BF]">Enquiry<span> Directly from Customers
-              </div>
-              <div class="text-[#374151] text-lg font-normal whitespace-normal mb-7">
-                Plots: Available, Advance Paid, or Sold Out. Directly interact with customers for updates, leads, and follow-ups.
-              </div>
-            </div>
-            <div class="flex justify-end items-start w-11/12 md:w-1/2">
-              <Image class='w-[500px]' src={Div2} alt='/' />
-            </div>
-          </div>
-        </div>
-			</div>
-
-      <div class="py-4">
-        <div class="md:max-w-6xl mx-auto px-3">
-          <div class="flex flex-col-reverse md:flex-row items-center my-8">
-            <div class="flex justify-start items-start w-11/12 md:w-1/2">
-              <Image class='w-[500px]' src={Div3} alt='/' />
-            </div>
-            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
-              <p class='text-[#9333ea] text-xl font-normal'>#3</p>
-              <div class="text-[#000] text-6xl font-bold whitespace-normal mb-7">
-                Manage Plots <span class="text-[#7634BF]">anywhere<span>
-              </div>
-              <div class="text-[#374151] text-lg font-normal whitespace-normal mb-7">
-                Change the status of your plots to either "Available", "Advance Paid", or "Sold out". Updates will be automatically generated.
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-
-      <div class="bg-black py-4">
-        <div class="md:max-w-6xl  mx-auto px-3">
-          <div class="flex flex-col md:flex-row justify-around items-center my-4">
-            <div class='text-[#FFFFFF] my-4'>
-              <h1 class='text-6xl  font-bold'>15</h1>
-              <p class='text-xl font-normal'>Team members</p>
-            </div>
-            <div class='text-[#FFFFFF] my-4'>
-              <h1 class='text-6xl  font-bold'>230K</h1>
-              <p class='text-xl font-normal'>Happy users</p>
-            </div>
-            <div class='text-[#FFFFFF] my-4'>
-              <h1 class='text-6xl  font-bold'>340+</h1>
-              <p class='text-xl font-normal'>Supported lenders</p>
-            </div>
-          </div>
-        </div>
-			</div>
-
-      <div class="bg-blend-screen bg-[#000] bg-[url('../images/playstore.svg')] bg-cover py-4">
-        <div class="md:max-w-6xl mx-auto px-3">
-          <div class="flex flex-col-reverse md:flex-row items-center my-8">
-            <div class="flex justify-start items-start w-11/12 md:w-1/2">
-              <Image class='w-[500px]' src={NewFream} alt='/' />
-            </div>
-            <div class="flex flex-col justify-center w-11/12 md:w-1/2 md:pl-4">
-              <div class="text-[#ffff] text-6xl font-bold whitespace-normal mb-7">
-                What are you waiting for?
-              </div>
-              <div class="text-[#fff] text-lg font-normal whitespace-normal mb-7">
-                There's no better time to take control of your Plots. With Bookmyplots powerful categorization and visualization tools you'll actually stick to your budget.
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-
-		</div>
-		<Footer />
-	</main>
+      </div>
+    </div>
+    <Footer />
+  </main>
 </Layout>
-<script>
-	// Find all buttons with the `alert` class on the page.
-	const button = document.getElementById('whatapp');
-  
-	// Handle clicks on each button.
-	button && button.addEventListener('click', function() {
-		const formattedPhoneNumber = encodeURIComponent(7418857157);
-		const whatsappUrl = `https://api.whatsapp.com/send?phone=${formattedPhoneNumber}`;
-		window.open(whatsappUrl);
-	});
-  const signupButton = document.getElementById("Signup");
-    signupButton &&
-        signupButton.addEventListener("click", function () {
-            const SignupUrl =
-                "https://play.google.com/store/apps/details?id=co.bookmyplots.app";
-            window.open(SignupUrl);
-        });
-</script>
